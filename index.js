@@ -4,12 +4,14 @@ let countEl = document.getElementById("count-el");
 
 function increment() {
   count++;
-  countEl.innerText = count;
+  countEl.textContent = count;
 }
 
 function save() {
   let previousCount = ` ${count} - `;
-  saveEl.innerText += previousCount;
+  saveEl.textContent += previousCount;
+  countEl.textContent = 0
+  count = 0
 }
 
 function reset() {
